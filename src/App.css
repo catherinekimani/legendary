@@ -104,16 +104,16 @@ header #menu-btn:hover {
 .wrapper {
     width: 100vw;
     min-height: 100vh;
-    background-color: white;
-    padding: 30px 15px;
-    background: linear-gradient(45deg, #f9faf966, #f6f9f566);
+    background: rgba(251, 221, 187, 0.51);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
 .login {
     width: 100%;
-    max-width: 800px;
+    max-width: 850px;
     background-color: #fff;
     display: flex;
     border-radius: 10px;
@@ -124,37 +124,31 @@ header #menu-btn:hover {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    max-width: 100%;
+    max-width: 900px;
     background-color: #fff;
-    padding: 60px 45px;
+    padding: 70px 80px;
 }
 @media only screen and (max-width: 767.98px) {
     .login .login-form {
         max-width: 100%;
-   }
+}
 }
 @media only screen and (max-width: 575.98px) {
     .login .login-form {
         padding: 40px 20px;
-   }
+}
 }
 
 .login .login-form .form-wrapper .input-wrapper .label, .login .login-form .form-wrapper .input-wrapper .input {
     display: block;
     width: 100%;
 }
-.login .login-form .form-wrapper .input-wrapper .label {
-    padding-bottom: 3px;
-    font-size: 0.9rem;
-    color: #393939;
-}
+
 .login .login-form .form-wrapper .input-wrapper .input {
-    padding: 10px;
+    margin-bottom: 5%;
+    padding: 15px;
     border-radius: 5px;
     border: 1px solid rgba(251, 221, 187, 0.51);
-}
-.login .login-form .form-wrapper .action-help {
-    padding: 20px 0;
 }
 
 .login .login-form .form-wrapper .action-help .help-link {
@@ -164,29 +158,16 @@ header #menu-btn:hover {
     font-size: 0.9rem;
 }
 .login .login-form .form-wrapper .action-help .help-link:hover {
-    color: #fe7092;
+    color: #040404;
 }
 .login .login-form .form-wrapper .actions {
     display: flex;
     flex-flow: column;
 }
-.login .login-form .form-wrapper .actions .action {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 15px 30px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    color: #fff;
-    background-color: #184d47;
-    text-decoration: none;
-    border: 1px solid #184d47;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+
 .login .login-form .form-wrapper .actions .action:hover {
     transform: scale(1.1);
-    box-shadow: 0 5px 25px -15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 25px -15px rgba(236, 22, 22, 0.5);
 }
 
 @media only screen and (max-width: 767.98px) {
