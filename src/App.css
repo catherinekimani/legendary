@@ -113,7 +113,7 @@ header #menu-btn:hover {
 
 .login {
     width: 100%;
-    max-width: 850px;
+    max-width: 900px;
     background-color: #fff;
     display: flex;
     border-radius: 10px;
@@ -128,6 +128,16 @@ header #menu-btn:hover {
     background-color: #fff;
     padding: 70px 80px;
 }
+
+.login .register-form {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+    max-width: 900px;
+    background-color: #fff;
+    padding: 40px 80px;
+}
+
 @media only screen and (max-width: 767.98px) {
     .login .login-form {
         max-width: 100%;
@@ -175,3 +185,47 @@ header #menu-btn:hover {
         display: none;
    }
 }
+
+
+@media only screen and (max-width: 767.98px) {
+    .login .register-form {
+        max-width: 100%;
+}
+}
+@media only screen and (max-width: 575.98px) {
+    .login .register-form {
+        padding: 40px 20px;
+}
+}
+
+.login .register-form .form-wrapper .input-wrapper .label, .login .register-form .form-wrapper .input-wrapper .input {
+    display: block;
+    width: 100%;
+}
+
+.login .register-form .form-wrapper .input-wrapper .input {
+    margin-bottom: 5%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(251, 221, 187, 0.51);
+}
+
+.login .register-form .form-wrapper .action-help .help-link {
+    color: rgba(0, 48, 46, 0.91);;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-size: 0.9rem;
+}
+.login .register-form .form-wrapper .action-help .help-link:hover {
+    color: #040404;
+}
+.login .register-form .form-wrapper .actions {
+    display: flex;
+    flex-flow: column;
+}
+
+.login .register-form .form-wrapper .actions .action:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 25px -15px rgba(236, 22, 22, 0.5);
+}
+
