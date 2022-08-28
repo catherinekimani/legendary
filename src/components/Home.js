@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import vector from '../assets/Vector.png'
 import image from '../assets/fourth.png'
 import google from '../assets/google.png'
 import third from '../assets/second.png'
 import one from '../assets/third.png'
 import second from '../assets/first.png'
+import app from '../assets/app.svg'
+import logo from '../assets/logo.svg'
+
+
 
 
 const Header = styled.header`
@@ -30,14 +33,13 @@ const Img = styled.img`
     position: absolute;
     left: 0%;
     right:0%;
-    top: 2.36%;
+    top: 2%;
     margin-left:2%;
-    background: #00EDDF;
     
 `
 const Button = styled.button`
     background: #E2B887;
-    color:black;
+    color:rgba(0, 48, 46, 1);
     width: 90px;
     height: 40px;
     font-weight:bold;
@@ -63,7 +65,7 @@ const H2 = styled.h2`
 `
 const P2 = styled.p`
             color:rgba(255, 255, 255, 0.83);
-        line-height:8px;
+        line-height:15px;
 `
 const Name = styled.h2`
     color:#FBDDBB;
@@ -76,11 +78,11 @@ const Descr = styled.p`
         line-height:8px;
 `
 const Container = styled.div`
-    margin-top:20%;
+    margin-top:15%;
 `
 const Button2 = styled.button`
     background: #FBDDBB;
-    width: 110px;
+    width: 50%;
 `
 
 const Footer = styled.footer`
@@ -90,12 +92,16 @@ const Footer = styled.footer`
 const I = styled.i`
     color:white;
 `
+const Two = styled.div`
+    margin-top:10%;
+`
+
 const Home = () => {
     return (
     <div className='home'>
     <>
         <Header>
-        <Img src={vector } class="card-img-top hover_img" alt=''></Img>
+        <Img src={logo } class="" alt=''></Img>
                 
         <a href="#header" class="logo">Lilies</a>
 <nav class="navbar">
@@ -107,15 +113,15 @@ const Home = () => {
 </nav>
 
 </Header>
-</>
+            </>
             <div className='container-fluid'>
-                <div className='row mt-5'>
+                <div className='row mt-5 ms-5'>
                     <div className='col-md-8'>
                         <H1>Order <Span>food</Span> anytime, anywhere</H1>
                         <P>Browse from our list of specials to place your order and have food</P>
                         <P>delivered to you in no time. Affordable, tasty and fast!</P>
                         <img src={google} class="" width={100} alt=''></img>
-                        <img src={google } class="" width={100}  alt=''></img>
+                        <img src={app} class="" width={100}  alt=''></img>
                         
                     </div>
                     <div className='col-md-4'>
@@ -123,27 +129,28 @@ const Home = () => {
                             
                     </div>
                 </div>
+                <Two className='two'>
                 <Main className='main'>
                     <H2>Special Meals of the day!</H2>
                     <P2 class='text-justify'>Check our sepecials of the day and get discounts on all our meals</P2>
                     <P2>and swift delivery to what ever location within Ilorin.</P2>
         </Main>
-                <div class='container'>
-                <div className='row'>
-                    <div class="col-md-3 mx-5 ">
+                <div class='container-fluid'>
+                <div className='grid-container'>
+                    <div class="">
                             <img src={one} class="img2" width={400} alt=''></img>
                             <Name>Stir fry Pasta</Name>
                             <Descr>Stir fry pasta yada yada yada</Descr>
                             <Descr>because of Sesan</Descr>
 
                     </div>
-                    <div class="col-md-3 mx-5">
+                    <div class="">
                             <img src={second} class="img2" width={400} alt=''></img>
                             <Name>Meat Balls</Name>
                             <Descr>Stir fry pasta yada yada yada</Descr>
                             <Descr>because of Sesan</Descr>
                     </div>
-                    <div class="col-md-3 mx-5">
+                    <div class="">
                             <img src={third} class="img2" width={400} alt=''></img>
                             <Name>Burger Meal</Name>
                             <Descr>Stir fry pasta yada yada yada </Descr>
@@ -151,14 +158,14 @@ const Home = () => {
                         </div>
                         </div>
                 </div>
-                <div className='container'>
-                <Container className='row'>
-                    <div className='col-md-7'>
+                <div className='container-fluid'>
+                <Container className='grid-container1 '>
+                    <div className=''>
                         <Name>Get notified when we update!</Name>
                         <Descr>Get notified when we add new items to our specials menu,</Descr>
                         <Descr> update our price list of have promos!</Descr>
                     </div>
-                        <div className='col-md-5'>
+                        <div className=''>
                             <form class="d-flex w-75 mt-2">
                                 <input class="form-control me-2" type="search" placeholder="gregphillips@gmail.com" aria-label="Search"></input>
                                 <Button2 class="btn btn-warning" type="submit">Get notified</Button2>
@@ -166,7 +173,7 @@ const Home = () => {
                     </div>
                     </Container>
                 </div>
-                <Footer className='h-75 text-light mt-5'>
+                <Footer className='text-light mt-5'>
                     <Footer className='container'>
                         <div className='d-flex justify-content-evenly'>
                             <div>
@@ -190,7 +197,7 @@ const Home = () => {
                             <div>
                                 <h3>Install App</h3>
                                 <img src={google} class="" width={100} alt=''></img> <br></br>
-                                <img src={google } class="" width={100}  alt=''></img>
+                                <img src={app } class="" width={100}  alt=''></img>
                             </div>
                         </div>
                         <div className='containe'>
@@ -205,7 +212,8 @@ const Home = () => {
                             </div>
                 </Footer>
                 </Footer>
-</div>
+                </Two>
+            </div>
 </div>
     
 )

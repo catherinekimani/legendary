@@ -35,11 +35,12 @@ header .navbar a {
     padding: .5rem 1.5rem;
     font-weight: bold;
 }
+
 header .logo {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 5%;
+    margin-left: 6%;
     margin-top: -1%;
     text-decoration: none;
     left: 0%;
@@ -50,6 +51,7 @@ header .logo {
     height: 500px;
     width: 500px;
 }
+
 header .navbar a:hover {
     color: black;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -120,6 +122,7 @@ header #menu-btn:hover {
     overflow: hidden;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
 }
+
 .login .login-form {
     flex-grow: 1;
     flex-shrink: 0;
@@ -141,15 +144,17 @@ header #menu-btn:hover {
 @media only screen and (max-width: 767.98px) {
     .login .login-form {
         max-width: 100%;
+    }
 }
-}
+
 @media only screen and (max-width: 575.98px) {
     .login .login-form {
         padding: 40px 20px;
-}
+    }
 }
 
-.login .login-form .form-wrapper .input-wrapper .label, .login .login-form .form-wrapper .input-wrapper .input {
+.login .login-form .form-wrapper .input-wrapper .label,
+.login .login-form .form-wrapper .input-wrapper .input {
     display: block;
     width: 100%;
 }
@@ -162,14 +167,17 @@ header #menu-btn:hover {
 }
 
 .login .login-form .form-wrapper .action-help .help-link {
-    color: rgba(0, 48, 46, 0.91);;
+    color: rgba(0, 48, 46, 0.91);
+    ;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     font-size: 0.9rem;
 }
+
 .login .login-form .form-wrapper .action-help .help-link:hover {
     color: #040404;
 }
+
 .login .login-form .form-wrapper .actions {
     display: flex;
     flex-flow: column;
@@ -183,22 +191,24 @@ header #menu-btn:hover {
 @media only screen and (max-width: 767.98px) {
     .login .login-decoration {
         display: none;
-   }
+    }
 }
 
 
 @media only screen and (max-width: 767.98px) {
     .login .register-form {
         max-width: 100%;
+    }
 }
-}
+
 @media only screen and (max-width: 575.98px) {
     .login .register-form {
         padding: 40px 20px;
-}
+    }
 }
 
-.login .register-form .form-wrapper .input-wrapper .label, .login .register-form .form-wrapper .input-wrapper .input {
+.login .register-form .form-wrapper .input-wrapper .label,
+.login .register-form .form-wrapper .input-wrapper .input {
     display: block;
     width: 100%;
 }
@@ -211,14 +221,17 @@ header #menu-btn:hover {
 }
 
 .login .register-form .form-wrapper .action-help .help-link {
-    color: rgba(0, 48, 46, 0.91);;
+    color: rgba(0, 48, 46, 0.91);
+    ;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     font-size: 0.9rem;
 }
+
 .login .register-form .form-wrapper .action-help .help-link:hover {
     color: #040404;
 }
+
 .login .register-form .form-wrapper .actions {
     display: flex;
     flex-flow: column;
@@ -229,3 +242,17 @@ header #menu-btn:hover {
     box-shadow: 0 5px 25px -15px rgba(236, 22, 22, 0.5);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 500px;
+    grid-gap: 10%;
+    padding: 25px;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 50px;
+    grid-column-gap: 40%;
+}
