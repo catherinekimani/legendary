@@ -1,6 +1,5 @@
-import React from 'react'
+import React,{useState}  from 'react'
 import register from '../assets/register.png'
-
 import styled from 'styled-components'
 
 const Loginbg = styled.div`
@@ -34,6 +33,28 @@ const Button = styled.button`
 `
 
 const Register = () => {
+    const [form, setForm] = useState({
+    name: '',
+    email: '',
+    password: ''
+    })
+    const handleChange = (e) => {
+    setForm({
+    ...form,
+    [e.target.name]: e.target.value
+    })
+    }
+    const handleSubmit = (e) => {
+    e.preventDefault()
+    sessionStorage.setItem('user', JSON.stringify(form))
+
+    alert("Sign Up Successful")
+
+    setInterval(() => {
+    window.location= '/login'
+    }, 1500);
+    
+}
     return (
     <Loginbg>
         
@@ -45,27 +66,29 @@ const Register = () => {
 
                     </div>
                     
-            <div class="register-form">      
+                    <div class="register-form">   
+            <form onSubmit={handleSubmit}>          
             <Title class="login-title">Welcome to Lilies!</Title>
                         <div class="form-wrapper">
                             <div class="input-wrapper">
-                <input class="input" type="text" id="text" name="text" placeholder='Your First Name' />
+                <input class="input" type="text" id="text" name="name" placeholder='Your First Name' onChange={handleChange}  required />
                 </div>
                 <div class="input-wrapper">
-                <input class="input" type="text" id="email" name="email" placeholder='Your Email address' />
+                <input class="input" type="text" id="email" name="email" placeholder='Your Email address' onChange={handleChange}  required />
                 </div>
                 <div class="input-wrapper">
-                <input class="input" type="password" id="password" name="password" placeholder='Your Password' />
+                <input class="input" type="password" id="password" name="password" placeholder='Your Password' onChange={handleChange}  required />
                 </div>
                 <div class="actions">
-                <Button class="action" href="l">Sign Up</Button>
+                <Button class="action"  type="submit">Sign Up</Button>
                             </div>
                             <div className='text-center'>
                             <div class="action-help">
-                <a class="help-link" href="l">Already have an account. LOGIN</a>
+                <a class="help-link" href="/login">Already have an account. LOGIN</a>
                 </div>
 </div>
-            </div>
+                            </div>
+                            </form>
         </div>
         </div>
         </div>
